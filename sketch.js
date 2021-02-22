@@ -17,11 +17,6 @@ function setup(){
     world = engine.world;
     
  
-    var options = {
-        restitution: 1
-    }
-ball = Bodies.circle(100,100,20, options);
-World.add(world, ball);
    ground1 = new Ground(600,780,1200,20);
    ground2 = new Ground(1000,275,300,20);
    ground4 = new Ground(1000, 750,300,20);
@@ -55,7 +50,6 @@ function draw(){
 
     Engine.update(engine);
     ellipseMode(RADIUS);
-    ellipse(ball.position.x, ball.position.y, 20);
   ground1.display();
   ground2.display();
   ground4.display();
